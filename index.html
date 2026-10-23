@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RK Tiling | Tile Visualizer</title><link rel="icon" href="data:image/png;base64,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">
+<style>
+:root{--bg:#f4f2ee;--panel:#fff;--text:#1d1c1a;--mut:#6b675f;--line:#dcd7ce;--acc:#f20008;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171614;--panel:#23211e;--text:#f0ece4;--mut:#a39d91;--line:#3a3732;--acc:#ff3b43;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171614;--panel:#23211e;--text:#f0ece4;--mut:#a39d91;--line:#3a3732;--acc:#ff3b43;color-scheme:dark}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#app{display:flex;height:100%}
+#view{flex:1;position:relative;min-width:0;min-height:0}
+#c{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+#views{position:absolute;right:10px;top:10px;display:flex;gap:6px}
+#views button,.tab,.mt{padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--text);cursor:pointer;font-size:12px}
+#hint{position:absolute;left:12px;bottom:10px;font-size:12px;color:var(--mut);pointer-events:none}
+#panel{width:310px;background:var(--panel);border-left:1px solid var(--line);padding:16px;overflow:auto;box-sizing:border-box}
+h1{font-size:20px;margin:0 0 2px;letter-spacing:-.01em}
+.tabs{display:flex;gap:6px;margin-bottom:6px}.tab,.mt{flex:1;border-radius:8px;font-size:14px}.tab.on,.mt.on{background:var(--acc);border-color:var(--acc);color:#fff}[hidden]{display:none!important}#pc{width:100%;height:100%;display:block;touch-action:none;cursor:crosshair;object-fit:contain}input[type=number],input[type=text],textarea{width:100%;padding:6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);box-sizing:border-box}#pst{font-size:12px;color:var(--mut);margin:6px 0}#busy{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:var(--panel);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:12px;z-index:2}#quote{height:130px;font:12px/1.4 ui-monospace,Menlo,monospace;resize:vertical}.act.pri{background:var(--acc);color:#fff;border-color:var(--acc)}#panel{box-shadow:-8px 0 24px rgba(0,0,0,.06)}.sub{color:var(--mut);font-size:12px;margin-bottom:12px}.brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}.brand img{width:46px;height:46px;border-radius:10px}.brand .sub{margin:0}#view::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 58%,rgba(0,0,0,.26))}#view.ph::after{display:none}
+.lbl{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:14px 0 6px}
+#sw{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+#sw button{padding:0;border:2px solid var(--line);border-radius:8px;overflow:hidden;background:none;cursor:pointer;aspect-ratio:1}
+#sw button.on{border-color:var(--acc)}#sw canvas{width:100%;height:100%;display:block}
+#tn{font-size:13px;margin-top:6px}
+select,input[type=range]{width:100%}
+select{padding:7px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--text)}
+.row{display:flex;align-items:center;gap:8px;margin:6px 0}
+input[type=color]{width:42px;height:28px;border:1px solid var(--line);padding:0;background:none;flex:none}
+.act{width:100%;margin-top:8px;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);cursor:pointer;font-weight:600}
+#info{margin-top:12px;padding:10px;border-radius:8px;background:var(--bg);color:var(--mut);font-size:13px}
+@media (max-width:760px){#app{flex-direction:column}#view{flex:1 1 52%}#panel{width:auto;flex:0 0 48%;border-left:0;border-top:1px solid var(--line)}}
+</style></head>
+<body>
+<div id="app">
+ <div id="view"><canvas id="c"></canvas><canvas id="pc" hidden></canvas>
+  <div id="busy" hidden>Rendering tiles…</div><div id="views"><button data-v="0.5,1.1">Corner</button><button data-v="0,1.25">Front</button><button data-v="0.4,0.3">Top</button></div>
+  <div id="hint">Drag to rotate · scroll to zoom</div></div>
+ <aside id="panel">
+  <div class="brand"><img src="data:image/png;base64,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" alt="RK Tiling"><div><h1>RK Tiling</h1><div class="sub">Tile visualizer and quote</div></div></div>
+  <div class="tabs"><button class="mt on" id="m3">3D room</button><button class="mt" id="mp">My photo</button></div>
+  <div id="roomx"><div class="lbl">Room width, depth, height (m)</div><div class="row"><input type="number" id="rw" value="5" min="2" max="9" step=".5"><input type="number" id="rd" value="4" min="2" max="9" step=".5"><input type="number" id="rh" value="2.6" min="2" max="4" step=".1"></div></div>
+  <div id="photox" hidden><label class="act" style="display:block;text-align:center;box-sizing:border-box">Upload room photo<input type="file" id="pup" accept="image/*" hidden></label>
+   <div id="pst">Upload a photo, then click the 4 corners of the floor or wall: far left, far right, near right, near left.</div>
+   <button class="act" id="pai">Auto-detect surfaces with Claude</button><div id="pdet"></div><button class="act" id="pall" hidden>Tile everything detected</button>
+   <div class="lbl">Real size of that area (m): width, depth or height</div><div class="row"><input type="number" id="pw" value="4" min=".5" max="12" step=".5"><input type="number" id="pd" value="3" min=".5" max="12" step=".5"></div>
+   <button class="act" id="pf">Tile it with the Floor tile</button><button class="act" id="pwl">Tile it with the Walls tile</button><button class="act" id="pr">Reset photo</button><button class="act" id="brush">Restore brush: off</button><input type="range" id="brs" min="5" max="80" value="25"></div>
+  <div class="tabs"><button class="tab on" data-s="floor">Floor</button><button class="tab" data-s="walls">Walls</button></div>
+  <div id="wallx"><div class="row"><input type="checkbox" id="wallOn"><label for="wallOn">Tile the walls</label></div>
+   <div class="row"><input type="color" id="paint" value="#e8e3da"><label for="paint">Wall paint colour</label></div></div>
+  <div class="lbl">Tile design</div><div id="sw"></div><div id="tn"></div>
+  <label class="act" style="display:block;text-align:center;box-sizing:border-box">Upload tile photo<input type="file" id="up" accept="image/*" hidden></label>
+  <div class="lbl">Tile size</div>
+  <select id="size"><option value="20,20">20 × 20 cm</option><option value="30,30">30 × 30 cm</option><option value="30,60">30 × 60 cm</option><option value="45,45">45 × 45 cm</option><option value="60,60">60 × 60 cm</option><option value="60,120">60 × 120 cm</option><option value="20,120">20 × 120 cm plank</option></select>
+  <div class="lbl">Layout</div>
+  <select id="layout"><option value="straight">Straight grid</option><option value="brick">Brick, half offset</option><option value="third">Third offset</option><option value="diag">Diagonal 45°</option><option value="herring">Herringbone (2:1 and plank sizes)</option></select>
+  <div class="lbl">Grout width and colour</div>
+  <div class="row"><input type="range" id="gw" min="0" max="10"><input type="color" id="gc"></div>
+  <div class="row"><input type="checkbox" id="rot"><label for="rot">Random 90° rotation (square tiles)</label></div>
+  <div class="lbl">Finish, matt to polished</div><input type="range" id="gloss" min="0" max="100" value="45">
+  <div class="row"><input type="checkbox" id="props"><label for="props">Show furniture</label></div>
+  <div class="lbl">Price per m² (USD), this surface</div><input type="number" id="price" min="0" step=".5" placeholder="e.g. 18">
+  <button class="act" id="shuf">Shuffle tiles</button><button class="act" id="save">Save image</button>
+  <div class="lbl">Quote</div><textarea id="quote" readonly></textarea><div class="row"><input type="text" id="wa" placeholder="WhatsApp number, e.g. 263771234567"></div><button class="act pri" id="waBtn">Send quote on WhatsApp</button><button class="act" id="cpq">Copy quote</button>
+  <div id="info"></div>
+ </aside>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),el=t=>document.createElement(t);
+function rnd(seed){let s=((seed%2147483646)+2147483646)%2147483646+1;return()=>(s=s*16807%2147483647)/2147483647}
+function H(x,y,s){const n=Math.sin(x*127.1+y*311.7+s*74.7)*43758.5453;return n-Math.floor(n)}
+function vn(x,y,s){const xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi,u=xf*xf*(3-2*xf),v=yf*yf*(3-2*yf);return H(xi,yi,s)*(1-u)*(1-v)+H(xi+1,yi,s)*u*(1-v)+H(xi,yi+1,s)*(1-u)*v+H(xi+1,yi+1,s)*u*v}
+function fbm(x,y,s){let a=.5,t=0;for(let i=0;i<4;i++){t+=a*vn(x,y,s+i);x=x*2+17;y=y*2+3;a/=2}return t}
+/* Tile catalogue: px(Xcm,Ycm,seed,widthCm,heightCm) returns [r,g,b]. Add real products with {id,name,img}. */
+const TILES=[
+{id:'marble',name:'Carrara marble',px:(X,Y,s)=>{const u=X*.8+Y*.6,v=-X*.6+Y*.8,w=fbm(X*.02,Y*.02,s+1)*40,r=1-Math.abs(fbm((u+w)*.012,v*.035,s)*2-1),r2=1-Math.abs(fbm((u-w)*.03,v*.07,s+7)*2-1),b=236-fbm(X*.04,Y*.04,s+9)*16,c=b-Math.pow(r,30)*70-Math.pow(r2,40)*40;return[c,c+.5,c+2]}},
+{id:'slate',name:'Slate grey',px:(X,Y,s)=>{const c=62+fbm(X*.07,Y*.07,s)*60+(fbm(X*.5,Y*.05,s+3)-.5)*30;return[c-5,c,c+7]}},
+{id:'terra',name:'Terracotta',px:(X,Y,s)=>{const n=fbm(X*.06,Y*.06,s),p=H(X*3|0,Y*3|0,s)>.996?-50:0;return[180+n*55+p,92+n*38+p,58+n*26+p]}},
+{id:'oak',name:'Oak wood',px:(X,Y,s,W,Q)=>{const A=W>Q?Y:X,L=W>Q?X:Y,g=.5+.5*Math.sin(A*1.3+fbm(L*.012,A*.18,s)*10),m=.35+g*.5+(fbm(L*.4,A*.05,s+2)-.5)*.25;return[110+m*100,70+m*74,40+m*52]}},
+{id:'conc',name:'Concrete',px:(X,Y,s)=>{const c=148+(fbm(X*.035,Y*.035,s)-.5)*70+(fbm(X*1.1,Y*1.1,s+5)-.5)*20-(H(X*4|0,Y*4|0,s)>.997?40:0);return[c,c,c-4]}},
+{id:'zel',name:'Blue zellige',px:(X,Y,s)=>{const n=fbm(X*.12,Y*.12,s),m=fbm(X*.6,Y*.6,s+3);return[28+n*30+m*10,98+n*45+m*14,128+n*40+m*14]}},
+{id:'nero',name:'Nero gold marble',px:(X,Y,s)=>{const c=20+fbm(X*.06,Y*.06,s)*16,v=Math.pow(1-Math.abs(Math.sin((X*.02+Y*.014+fbm(X*.035,Y*.035,s+2)*5)*Math.PI)),22);return[c+v*200,c+v*150,c+v*60]}},
+{id:'trav',name:'Travertine',px:(X,Y,s)=>{const bd=.5+.5*Math.sin(Y*.9+fbm(X*.03,Y*.1,s)*8),p=fbm(X*.7,Y*.25,s+6)>.67?-32:0,c=205+bd*16+p;return[c+10,c-4,c-30]}},
+{id:'terr',name:'Terrazzo',px:(X,Y,s)=>{const cs=3.2,cx=Math.floor(X/cs),cy=Math.floor(Y/cs);let best=9,col=null;for(let i=-1;i<=1;i++)for(let j=-1;j<=1;j++){const a=cx+i,b=cy+j,jx=(a+.2+H(a,b,s)*.6)*cs,jy=(b+.2+H(a,b+7,s)*.6)*cs,rad=cs*(.12+H(a,b+3,s)*.38),d=Math.hypot(X-jx,Y-jy)/rad*(1+.13*Math.sin(Math.atan2(Y-jy,X-jx)*2+H(a,b,5)*6));if(d<1&&d<best){best=d;col=[[58,58,62],[176,88,68],[88,120,110],[200,168,120],[235,235,230]][(H(a,b+1,s)*5)|0]}}const n=(fbm(X*.5,Y*.5,s)-.5)*10;return col?[col[0]+n,col[1]+n,col[2]+n]:[224+n,221+n,213+n]}},
+{id:'wal',name:'Walnut wood',px:(X,Y,s,W,Q)=>{const A=W>Q?Y:X,L=W>Q?X:Y,g=.5+.5*Math.sin(A*1.1+fbm(L*.01,A*.16,s)*11),m=.3+g*.5+(fbm(L*.4,A*.05,s+2)-.5)*.2;return[58+m*80,38+m*52,26+m*36]}}
+];
+const VC={};
+function variants(t,size,k){const key=t.id+size+k;if(VC[key])return VC[key];const w=size[0]*k,h=size[1]*k,out=[];
+ for(let n=0;n<6;n++){const c=el('canvas');c.width=w;c.height=h;const g=c.getContext('2d');
+  if(t.img){const sc=Math.max(w/t.img.width,h/t.img.height);g.drawImage(t.img,(w-t.img.width*sc)/2,(h-t.img.height*sc)/2,t.img.width*sc,t.img.height*sc);g.fillStyle=n%2?'rgba(0,0,0,'+n*.015+')':'rgba(255,255,255,'+n*.015+')';g.fillRect(0,0,w,h)}
+  else{const d=g.createImageData(w,h),D=d.data,sh=(H(n,7,3)-.5)*18;for(let y=0,p=0;y<h;y++)for(let x=0;x<w;x++,p+=4){const q=t.px(x/k,y/k,n*13.7,size[0],size[1]);D[p]=q[0]+sh;D[p+1]=q[1]+sh;D[p+2]=q[2]+sh;D[p+3]=255}g.putImageData(d,0,0)}
+  out.push(c)}
+ return VC[key]=out}
+const S={sel:'floor',seed:1,gloss:.45,wallOn:false,paint:'#e8e3da',
+ floor:{tile:'marble',size:[60,60],layout:'straight',gw:3,grout:'#c9c4ba',rot:true,price:0},
+ walls:{tile:'zel',size:[30,60],layout:'brick',gw:2,grout:'#d8d4cc',rot:false,price:0}};
+let FW=500,FD=400,WH=260;const cur=()=>S[S.sel];
+
+function surface(c,wc,hc,ao){
+ const k=4,W=wc*k,Hh=hc*k,cv=el('canvas'),bv=el('canvas');cv.width=bv.width=W;cv.height=bv.height=Hh;
+ const g=cv.getContext('2d'),b=bv.getContext('2d');g.fillStyle=c.grout;g.fillRect(0,0,W,Hh);b.fillStyle='#000';b.fillRect(0,0,W,Hh);
+ const T=TILES.find(t=>t.id===c.tile),tw=c.size[0]*k,th=c.size[1]*k,gr=c.gw/10*k,vs=variants(T,c.size,k),diag=c.layout==='diag';
+ const R=Math.hypot(W,Hh)/2,x0=diag?-R:0,x1=diag?R:W,y0=diag?-R:0,y1=diag?R:Hh;
+ [g,b].forEach(x=>{x.save();if(diag){x.translate(W/2,Hh/2);x.rotate(Math.PI/4)}});
+ function herring(){const n=Math.max(1,Math.round(Math.max(tw,th)/Math.min(tw,th))),a=Math.min(tw,th),L=a*n,tall=th>tw,put=(x,y,pw,ph,r)=>{const v=vs[(r()*6)|0],rt=(pw>ph)===tall;b.fillStyle='#bbb';b.fillRect(x+gr/2,y+gr/2,pw-gr,ph-gr);g.save();g.beginPath();g.rect(x+gr/2,y+gr/2,pw-gr,ph-gr);g.clip();g.translate(x+pw/2,y+ph/2);if(rt)g.rotate(Math.PI/2);g.drawImage(v,-v.width/2,-v.height/2);if(rt)g.rotate(-Math.PI/2);g.strokeStyle='rgba(0,0,0,.22)';g.lineWidth=3;g.strokeRect(-pw/2+gr/2,-ph/2+gr/2,pw-gr,ph-gr);g.restore()};
+ for(let ch=Math.floor(x0/(2*L))-2;ch<Math.ceil(x1/(2*L))+2;ch++)for(let m=Math.floor(y0/a)-n-1;m<Math.ceil(y1/a)+n+1;m++){const r=rnd(ch*977+m*131+S.seed*7919),X=ch*2*L+m*a;put(X,m*a,L,a,r);put(X+L,m*a+a-L,a,L,r)}}
+ if(c.layout==='herring')herring();else for(let j=Math.floor(y0/th);j<Math.ceil(y1/th);j++){const off=c.layout==='brick'&&j%2?tw/2:c.layout==='third'?(j%3+3)%3*tw/3:0;
+  for(let i=Math.floor(x0/tw)-1;i<Math.ceil(x1/tw);i++){const x=i*tw+off,y=j*th,r=rnd(i*977+j*131+S.seed*7919),v=vs[(r()*6)|0],q=tw===th&&c.rot?Math.floor(r()*4):0;
+   b.fillStyle='#bbb';b.fillRect(x+gr/2,y+gr/2,tw-gr,th-gr);
+   g.save();g.beginPath();g.rect(x+gr/2,y+gr/2,tw-gr,th-gr);g.clip();g.translate(x+tw/2,y+th/2);g.rotate(q*Math.PI/2);g.drawImage(v,-tw/2,-th/2);g.rotate(-q*Math.PI/2);
+   g.strokeStyle='rgba(0,0,0,.22)';g.lineWidth=3;g.strokeRect(-tw/2+gr/2,-th/2+gr/2,tw-gr,th-gr);g.restore()}}
+ [g,b].forEach(x=>x.restore());
+ if(ao){[[0,0,0,70*k,0,0],[0,0,70*k,0,0,0]].forEach(a=>{const gd=g.createLinearGradient(a[0],a[1],a[2],a[3]);gd.addColorStop(0,'rgba(0,0,0,.4)');gd.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=gd;g.fillRect(0,0,W,Hh)})}
+ const m=new THREE.CanvasTexture(cv),bm=new THREE.CanvasTexture(bv),an=renderer.capabilities.getMaxAnisotropy();const rc=el('canvas');rc.width=W;rc.height=Hh;const rg=rc.getContext('2d');rg.fillStyle='#fff';rg.fillRect(0,0,W,Hh);rg.globalCompositeOperation='difference';rg.drawImage(bv,0,0);const rm=new THREE.CanvasTexture(rc);m.encoding=THREE.sRGBEncoding;m.anisotropy=bm.anisotropy=rm.anisotropy=an;return[m,bm,rm]}
+
+const canvas=$('#c'),renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
+renderer.outputEncoding=THREE.sRGBEncoding;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;
+renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(42,1,.1,50);
+{const c=el('canvas');c.width=4;c.height=256;const g=c.getContext('2d'),gr=g.createLinearGradient(0,0,0,256);gr.addColorStop(0,'#e9e6e0');gr.addColorStop(1,'#b9b4aa');g.fillStyle=gr;g.fillRect(0,0,4,256);const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;scene.background=t}
+(function(){const c=el('canvas');c.width=512;c.height=256;const g=c.getContext('2d'),gr=g.createLinearGradient(0,0,0,256);
+ gr.addColorStop(0,'#bcd6ff');gr.addColorStop(.5,'#fff3e0');gr.addColorStop(.52,'#7d776c');gr.addColorStop(1,'#3d3a34');g.fillStyle=gr;g.fillRect(0,0,512,256);
+ g.fillStyle='#fff';g.fillRect(330,60,60,70);g.fillRect(60,70,50,60);
+ const t=new THREE.CanvasTexture(c);t.mapping=THREE.EquirectangularReflectionMapping;t.encoding=THREE.sRGBEncoding;
+ const p=new THREE.PMREMGenerator(renderer);scene.environment=p.fromEquirectangular(t).texture})();
+scene.add(new THREE.HemisphereLight(0xffffff,0x8a857c,.35));
+const sun=new THREE.DirectionalLight(0xfff1d6,.55);sun.position.set(2.5,3.2,-4.5);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
+Object.assign(sun.shadow.camera,{left:-5,right:5,top:5,bottom:-5,near:1,far:14});sun.shadow.bias=-.0004;scene.add(sun);
+const spot=new THREE.SpotLight(0xfff0d8,1,0,.45,1,0);spot.castShadow=false;spot.shadow.mapSize.set(1024,1024);spot.shadow.bias=-.0005;spot.position.set(1.2,2.2,-3.4);spot.target.position.set(.2,0,-.2);scene.add(spot,spot.target);
+const mat=(c,r)=>new THREE.MeshStandardMaterial({color:c,roughness:r==null?.9:r});
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(FW/100,FD/100),new THREE.MeshStandardMaterial());floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;scene.add(floor);
+const back=new THREE.Mesh(new THREE.PlaneGeometry(FW/100,WH/100),mat(0xe8e3da));back.position.set(0,WH/200,-FD/200);back.receiveShadow=true;scene.add(back);
+const left=new THREE.Mesh(new THREE.PlaneGeometry(FD/100,WH/100),mat(0xe2ddd3));left.rotation.y=Math.PI/2;left.position.set(-FW/200,WH/200,0);left.receiveShadow=true;scene.add(left);
+function box(w,h,d,x,y,z,c,r,grp){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat(c,r));m.position.set(x,y,z);m.castShadow=m.receiveShadow=true;(grp||scene).add(m);return m}
+const win=new THREE.Mesh(new THREE.PlaneGeometry(1.5,1.2),new THREE.MeshBasicMaterial({toneMapped:false,map:(()=>{const c=el('canvas');c.width=4;c.height=128;const g=c.getContext('2d'),gr=g.createLinearGradient(0,0,0,128);gr.addColorStop(0,'#d3e4f6');gr.addColorStop(.55,'#f7f9fc');gr.addColorStop(.72,'#e8ede4');gr.addColorStop(1,'#cdd6c4');g.fillStyle=gr;g.fillRect(0,0,4,128);const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;return t})()}));win.position.set(1.1,1.5,-1.99);scene.add(win);
+const wm1=box(.06,1.2,.05,1.1,1.5,-1.97,0xf5f3ee),wm2=box(1.5,.06,.05,1.1,1.5,-1.97,0xf5f3ee);const fr=new THREE.Mesh(new THREE.PlaneGeometry(1.66,1.36),new THREE.MeshStandardMaterial({color:0xf5f3ee,roughness:.6}));scene.add(fr);const sill=box(1.82,.04,.14,0,0,0,0xf5f3ee,.5);
+const sk1=box(FW/100,.09,.02,0,.045,-FD/200+.01,0xf6f4ef),sk2=box(.02,.09,FD/100,-FW/200+.01,.045,0,0xf6f4ef);
+const noiseCv=(()=>{const c=el('canvas');c.width=c.height=256;const g=c.getContext('2d'),d=g.createImageData(256,256),f=(a,b)=>fbm(a*.05,b*.05,3);for(let y=0,p=0;y<256;y++)for(let x=0;x<256;x++,p+=4){const u=x/256,w=y/256,n=f(x,y)*(1-u)*(1-w)+f(x-256,y)*u*(1-w)+f(x,y-256)*(1-u)*w+f(x-256,y-256)*u*w,v=250+(n-.5)*7+(H(x,y,9)-.5)*3;d.data[p]=d.data[p+1]=d.data[p+2]=v;d.data[p+3]=255}g.putImageData(d,0,0);return c})();
+const noiseTex=(rx,ry)=>{const t=new THREE.CanvasTexture(noiseCv);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rx,ry);t.anisotropy=4;return t};
+const pleat=(()=>{const c=el('canvas');c.width=64;c.height=4;const g=c.getContext('2d');for(let x=0;x<64;x++){const v=205+Math.sin(x/64*Math.PI*8)*38;g.fillStyle='rgb('+v+','+v+','+(v-6)+')';g.fillRect(x,0,1,4)}const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;return t})();
+const curt=[0,1].map(()=>{const m=new THREE.Mesh(new THREE.BoxGeometry(.42,1,.07),new THREE.MeshStandardMaterial({map:pleat,roughness:1}));m.visible=false;scene.add(m);return m});
+const props=new THREE.Group();scene.add(props);
+const fab=mat(0x6b7b86,.98);fab.bumpMap=noiseTex(5,5);fab.bumpScale=1;
+const ell=(sx,sy,sz,x,y,z,m,rx,rz)=>{const o=new THREE.Mesh(new THREE.SphereGeometry(1,28,18),m||fab);o.scale.set(sx,sy,sz);o.position.set(x,y,z);o.rotation.set(rx||0,0,rz||0);o.castShadow=o.receiveShadow=true;props.add(o);return o};
+box(2.1,.26,.9,-1,.13,-1.45,0x4d5a63,.98,props);
+[-1.7,-1,-.3].forEach(x=>{ell(.36,.12,.44,x,.36,-1.38);ell(.36,.24,.13,x,.66,-1.76,fab,-.25)});
+[-2,0].forEach(x=>{const a=new THREE.Mesh(new THREE.CylinderGeometry(.14,.14,.9,24),fab);a.rotation.x=Math.PI/2;a.position.set(x,.4,-1.45);a.castShadow=a.receiveShadow=true;props.add(a)});
+ell(.19,.19,.07,-1.7,.55,-1.55,mat(0xc4864a,.95),-.2,.3);ell(.17,.17,.07,-.35,.55,-1.55,mat(0xe3d9c6,.95),-.2,-.3);
+const tbl=new THREE.Mesh(new THREE.CylinderGeometry(.45,.45,.04,40),mat(0x9a7448,.5));tbl.position.set(-1,.4,-.3);tbl.castShadow=tbl.receiveShadow=true;props.add(tbl);
+const leg=new THREE.Mesh(new THREE.CylinderGeometry(.05,.05,.4,16),mat(0x2b2b2b,.6));leg.position.set(-1,.2,-.3);leg.castShadow=true;props.add(leg);
+const pot=new THREE.Mesh(new THREE.CylinderGeometry(.18,.14,.35,24),mat(0xb5613a));pot.position.set(1.9,.175,-1.6);pot.castShadow=true;props.add(pot);
+for(let i=0;i<14;i++){const a=i*2.4,l=ell(.07,.3,.12,1.9+Math.sin(a)*.16,.62+(i%4)*.1,-1.6+Math.cos(a)*.16,mat(0x3f6e3c+(i%3)*0x050a05,.7),Math.cos(a)*.7,-Math.sin(a)*.7);l.rotation.y=a}
+box(1.1,.75,.03,-1,1.55,-1.985,0x2c2c2c,.6,props);box(.95,.6,.02,-1,1.55,-1.97,0xd8c9a8,.9,props);
+const lp=new THREE.Mesh(new THREE.CylinderGeometry(.012,.012,1.5,10),mat(0x222222,.4));lp.position.set(-2.3,.75,-1.7);props.add(lp);
+const lsh=new THREE.Mesh(new THREE.CylinderGeometry(.16,.24,.28,28,1,true),new THREE.MeshStandardMaterial({color:0xf3e3c4,emissive:0xffd9a0,emissiveIntensity:.8,side:THREE.DoubleSide,roughness:1}));lsh.position.set(-2.3,1.5,-1.7);props.add(lsh);
+const wl=new THREE.PointLight(0xffc98a,.5,4,2);wl.position.set(-2.3,1.45,-1.7);props.add(wl);
+const blobTex=(()=>{const c=el('canvas');c.width=c.height=128;const g=c.getContext('2d'),r=g.createRadialGradient(64,64,4,64,64,64);r.addColorStop(0,'rgba(0,0,0,.35)');r.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=r;g.fillRect(0,0,128,128);return new THREE.CanvasTexture(c)})();
+const blob=(w,d,x,z)=>{const m=new THREE.Mesh(new THREE.PlaneGeometry(w,d),new THREE.MeshBasicMaterial({map:blobTex,transparent:true,depthWrite:false}));m.rotation.x=-Math.PI/2;m.position.set(x,.004,z);props.add(m)};
+blob(2.8,1.5,-1,-1.45);blob(1.5,1.5,-1,-.3);blob(.9,.9,1.9,-1.6);blob(.6,.6,-2.3,-1.7);
+
+let dirty=true,timer;
+function apply(){clearTimeout(timer);$('#busy').hidden=false;timer=setTimeout(()=>{build();$('#busy').hidden=true},60)}
+function build(){
+ [floor,back,left].forEach(m=>{m.material.map&&m.material.map.dispose();m.material.bumpMap&&m.material.bumpMap.dispose();m.material.roughnessMap&&m.material.roughnessMap.dispose()});
+ const f=surface(S.floor,FW,FD,true),M=floor.material;M.map=f[0];M.bumpMap=f[1];M.bumpScale=2;M.roughnessMap=f[2];M.roughness=(.9-S.gloss*.75)/.27;M.envMapIntensity=.25+S.gloss*.7;M.needsUpdate=true;
+ [[back,FW],[left,FD]].forEach(([m,w])=>{const q=m.material;if(S.wallOn){const t=surface(S.walls,w,WH,false);q.map=t[0];q.bumpMap=t[1];q.bumpScale=2;q.roughnessMap=t[2];q.color.set(0xffffff);q.roughness=(.9-S.gloss*.6)/.27;q.envMapIntensity=.3+S.gloss*.7}else{q.roughnessMap=null;q.map=q.bumpMap=noiseTex(w/130,WH/130);q.bumpScale=.1;q.color.set(S.paint);q.roughness=.9;q.envMapIntensity=.3}q.needsUpdate=true});
+ const n=(c,a)=>Math.ceil(a/(c.size[0]*c.size[1]/1e4)*1.1);
+ $('#info').textContent='Floor '+(FW*FD/1e4).toFixed(1)+' m²: about '+n(S.floor,FW*FD/1e4)+' tiles of '+S.floor.size.join(' × ')+' cm'+(S.wallOn?'. Walls '+((FW+FD)*WH/1e4).toFixed(1)+' m²: about '+n(S.walls,(FW+FD)*WH/1e4)+' tiles of '+S.walls.size.join(' × ')+' cm':'')+'. Includes 10% waste.';quote();
+ dirty=true}
+
+let th=.5,ph=1.1,rad=6.5,drag=false,lx=0,ly=0,cx=0,cz=0;
+function orbit(){cam.position.set(cx+rad*Math.sin(ph)*Math.sin(th),rad*Math.cos(ph)+.5,cz+rad*Math.sin(ph)*Math.cos(th));cam.lookAt(cx,.6,cz);dirty=true}
+canvas.addEventListener('pointerdown',e=>{drag=true;lx=e.clientX;ly=e.clientY;canvas.setPointerCapture(e.pointerId)});
+canvas.addEventListener('pointerup',()=>drag=false);
+canvas.addEventListener('pointermove',e=>{if(!drag)return;th-=(e.clientX-lx)*.006;ph=Math.min(1.5,Math.max(.2,ph-(e.clientY-ly)*.006));lx=e.clientX;ly=e.clientY;orbit()});
+canvas.addEventListener('wheel',e=>{e.preventDefault();rad=Math.min(10,Math.max(3,rad+e.deltaY*.004));orbit()},{passive:false});
+document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>{[th,ph]=b.dataset.v.split(',').map(Number);orbit()});
+function resize(){const v=$('#view');renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(v.clientWidth,v.clientHeight,false);cam.aspect=v.clientWidth/v.clientHeight;cam.updateProjectionMatrix();dirty=true}
+new ResizeObserver(resize).observe($('#view'));
+(function loop(){requestAnimationFrame(loop);if(dirty){renderer.render(scene,cam);dirty=false}})();
+
+function addSwatch(t){const b=el('button'),c=el('canvas');c.width=c.height=72;c.getContext('2d').drawImage(variants(t,[24,24],3)[0],0,0,72,72);b.title=t.name;b.dataset.id=t.id;b.appendChild(c);
+ b.onclick=()=>{cur().tile=t.id;sync();apply()};$('#sw').appendChild(b)}
+function sync(){const c=cur();document.querySelectorAll('#sw button').forEach(b=>b.classList.toggle('on',b.dataset.id===c.tile));
+ $('#tn').textContent=TILES.find(t=>t.id===c.tile).name;$('#size').value=c.size.join(',');$('#layout').value=c.layout;$('#gw').value=c.gw;$('#gc').value=c.grout;$('#rot').checked=c.rot;$('#price').value=c.price||'';$('#wallx').style.display=S.sel==='walls'&&!photo?'block':'none';
+ document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.s===S.sel))}
+TILES.forEach(addSwatch);
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{S.sel=t.dataset.s;sync()});
+$('#size').onchange=e=>{cur().size=e.target.value.split(',').map(Number);apply()};
+$('#layout').onchange=e=>{cur().layout=e.target.value;apply()};
+$('#gw').oninput=e=>{cur().gw=+e.target.value;apply()};
+$('#gc').oninput=e=>{cur().grout=e.target.value;apply()};
+$('#rot').onchange=e=>{cur().rot=e.target.checked;apply()};
+$('#gloss').oninput=e=>{S.gloss=e.target.value/100;apply()};
+$('#wallOn').onchange=e=>{S.wallOn=e.target.checked;apply()};
+$('#paint').oninput=e=>{S.paint=e.target.value;apply()};
+$('#props').onchange=e=>{props.visible=e.target.checked;dirty=true};
+$('#shuf').onclick=()=>{S.seed++;apply()};
+$('#up').onchange=e=>{const f=e.target.files[0];if(!f)return;const im=new Image();im.onload=()=>{const t={id:'u'+Date.now(),name:'Custom: '+f.name,img:im};TILES.push(t);addSwatch(t);cur().tile=t.id;if(S.sel==='walls'){S.wallOn=true;$('#wallOn').checked=true}sync();apply()};im.src=URL.createObjectURL(f)};
+function updateRoom(){const cl=(v,a,b)=>Math.min(b,Math.max(a,v||a));FW=cl(+$('#rw').value,2,9)*100;FD=cl(+$('#rd').value,2,9)*100;WH=cl(+$('#rh').value,2,4)*100;cx=-2.5+FW/200;cz=-2+FD/200;
+ floor.geometry.dispose();floor.geometry=new THREE.PlaneGeometry(FW/100,FD/100);floor.position.set(cx,0,cz);
+ back.geometry.dispose();back.geometry=new THREE.PlaneGeometry(FW/100,WH/100);back.position.set(cx,WH/200,-2);
+ left.geometry.dispose();left.geometry=new THREE.PlaneGeometry(FD/100,WH/100);left.position.set(-2.5,WH/200,cz);
+ sk1.scale.x=FW/500;sk1.position.x=cx;sk2.scale.z=FD/400;sk2.position.z=cz;
+ const wx=-2.5+FW/100*.75,wy=Math.min(1.5,WH/100-.7);win.position.set(wx,wy,-1.99);fr.position.set(wx,wy,-1.992);sill.position.set(wx,wy-.7,-1.93);spot.position.set(wx+.2,wy+.7,-3.4);spot.target.position.set(wx-1,0,-.2);curt.forEach((m,i)=>{const h=WH/100-.12;m.scale.y=h;m.position.set(wx+(i?.98:-.98),h/2+.04,-1.94)});aoB.scale.set(FW/100,WH/100,1);aoB.position.set(cx,WH/200,-1.997);aoL.scale.set(FD/100,WH/100,1);aoL.position.set(-2.497,WH/200,cz);wm1.position.set(wx,wy,-1.97);wm2.position.set(wx,wy,-1.97);orbit()}
+['rw','rd','rh'].forEach(i=>$('#'+i).onchange=()=>{updateRoom();apply()});
+let photo=false;const P={base:null,orig:null,pts:[],drag:-1},pc=$('#pc'),pg=pc.getContext('2d');
+const cp=c=>{const n=el('canvas');n.width=c.width;n.height=c.height;n.getContext('2d').drawImage(c,0,0);return n};
+function setMode(p){photo=p;$('#view').classList.toggle('ph',p);canvas.hidden=p;pc.hidden=!p;$('#roomx').hidden=p;$('#photox').hidden=!p;$('#views').hidden=p;$('#m3').classList.toggle('on',!p);$('#mp').classList.toggle('on',p);$('#hint').textContent=p?'Click 4 corners, drag to adjust':'Drag to rotate · scroll to zoom';sync();quote();if(!p)resize()}
+$('#m3').onclick=()=>setMode(false);$('#mp').onclick=()=>setMode(true);
+function draw(){if(!P.base)return;pc.width=P.base.width;pc.height=P.base.height;pg.drawImage(P.base,0,0);const p=P.pts;$('#pst').textContent=p.length<4?'Click corner '+(p.length+1)+' of 4 (far left, far right, near right, near left).':'Drag the corners to fit, set the real size, then tile it.';if(!p.length)return;pg.lineWidth=Math.max(2,pc.width/400);pg.strokeStyle=pg.fillStyle='#ffcc33';pg.beginPath();p.forEach((q,i)=>i?pg.lineTo(q[0],q[1]):pg.moveTo(q[0],q[1]));if(p.length===4)pg.closePath();pg.stroke();p.forEach(q=>{pg.beginPath();pg.arc(q[0],q[1],pc.width/120+3,0,7);pg.fill()})}
+function pos(e){const r=pc.getBoundingClientRect(),s=Math.min(r.width/pc.width,r.height/pc.height);return[(e.clientX-r.left-(r.width-pc.width*s)/2)/s,(e.clientY-r.top-(r.height-pc.height*s)/2)/s]}
+pc.addEventListener('pointerdown',e=>{if(!P.base)return;if(brush){painting=true;pc.setPointerCapture(e.pointerId);paint(e);return}const q=pos(e),tol=pc.width/25;P.drag=P.pts.findIndex(p=>Math.hypot(p[0]-q[0],p[1]-q[1])<tol);if(P.drag<0&&P.pts.length<4){P.pts.push(q);P.drag=P.pts.length-1}draw();pc.setPointerCapture(e.pointerId)});
+pc.addEventListener('pointermove',e=>{if(painting){paint(e);return}if(P.drag>=0){P.pts[P.drag]=pos(e);draw()}});
+pc.addEventListener('pointerup',()=>{P.drag=-1;painting=false});
+$('#pup').onchange=e=>{const f=e.target.files[0];if(!f)return;const im=new Image();im.onload=()=>{const s=Math.min(1,1600/Math.max(im.width,im.height)),c=el('canvas');c.width=im.width*s|0;c.height=im.height*s|0;c.getContext('2d').drawImage(im,0,0,c.width,c.height);P.orig=c;P.base=cp(c);P.pts=[];P.det=null;P.poly=null;showDet();draw()};im.src=URL.createObjectURL(f)};
+$('#pr').onclick=()=>{if(P.orig){P.base=cp(P.orig);P.pts=[];P.log=[];draw();quote()}};
+function tileArea(cfg,wm,dm){const q=P.pts;if(!P.base||q.length<4){$('#pst').textContent='Place all 4 corners first.';return}
+ const sf=surface(cfg,Math.round(wm*100),Math.round(dm*100),false),tc=sf[0].image,tw=tc.width,th=tc.height,td=tc.getContext('2d').getImageData(0,0,tw,th).data;
+ const x=q.map(p=>p[0]),y=q.map(p=>p[1]),dx1=x[1]-x[2],dx2=x[3]-x[2],dx3=x[0]-x[1]+x[2]-x[3],dy1=y[1]-y[2],dy2=y[3]-y[2],dy3=y[0]-y[1]+y[2]-y[3],den=dx1*dy2-dy1*dx2;
+ let g=0,h=0;if(den&&Math.abs(dx3)+Math.abs(dy3)>1e-9){g=(dx3*dy2-dy3*dx2)/den;h=(dx1*dy3-dy1*dx3)/den}
+ const a=x[1]-x[0]+g*x[1],b=x[3]-x[0]+h*x[3],c=x[0],d=y[1]-y[0]+g*y[1],e=y[3]-y[0]+h*y[3],f=y[0];
+ const iA=e-f*h,iB=c*h-b,iC=b*f-c*e,iD=f*g-d,iE=a-c*g,iF=c*d-a*f,iG=d*h-e*g,iH=b*g-a*h,iI=a*e-b*d;
+ const W=P.base.width,Ht=P.base.height,bx=P.base.getContext('2d'),im=bx.getImageData(0,0,W,Ht),D=im.data;
+ const sm=el('canvas');sm.width=Math.max(8,W>>4);sm.height=Math.max(8,Ht>>4);sm.getContext('2d').drawImage(P.base,0,0,sm.width,sm.height);const lc=el('canvas');lc.width=W;lc.height=Ht;const lg=lc.getContext('2d');lg.imageSmoothingQuality='high';lg.drawImage(sm,0,0,W,Ht);const LD=lg.getImageData(0,0,W,Ht).data;
+ const x0=Math.max(0,Math.floor(Math.min(...x))),x1=Math.min(W-1,Math.ceil(Math.max(...x))),y0=Math.max(0,Math.floor(Math.min(...y))),y1=Math.min(Ht-1,Math.ceil(Math.max(...y))),bw=x1-x0+1,T=new Float32Array(bw*(y1-y0+1)*4),so=[[.25,.25],[.75,.25],[.25,.75],[.75,.75]];
+ let ls=0,ln=0;
+ for(let Y=y0;Y<=y1;Y++)for(let X=x0;X<=x1;X++){let r=0,gg=0,bb=0,n=0;for(const[ox,oy]of so){const xx=X+ox,yy=Y+oy,w=iG*xx+iH*yy+iI;if(w<=0)continue;const u=(iA*xx+iB*yy+iC)/w,v=(iD*xx+iE*yy+iF)/w;if(u>=0&&u<1&&v>=0&&v<1){const p=((v*th|0)*tw+(u*tw|0))*4;r+=td[p];gg+=td[p+1];bb+=td[p+2];n++}}
+  if(n){const o=((Y-y0)*bw+X-x0)*4,s=(Y*W+X)*4;T[o]=r/n;T[o+1]=gg/n;T[o+2]=bb/n;T[o+3]=n/4;ls+=.299*LD[s]+.587*LD[s+1]+.114*LD[s+2];ln++}}
+ const avg=ln?ls/ln:128;let M=null;if(P.poly){const mc=el('canvas');mc.width=W;mc.height=Ht;const mg=mc.getContext('2d');mg.fillStyle='#fff';mg.beginPath();P.poly.forEach((p,i)=>i?mg.lineTo(p[0],p[1]):mg.moveTo(p[0],p[1]));mg.closePath();mg.fill();M=mg.getImageData(0,0,W,Ht).data}
+ for(let Y=y0;Y<=y1;Y++)for(let X=x0;X<=x1;X++){const o=((Y-y0)*bw+X-x0)*4;if(!T[o+3])continue;const s=(Y*W+X)*4,lum=.299*LD[s]+.587*LD[s+1]+.114*LD[s+2],k=Math.min(1.5,Math.max(.5,Math.pow(lum/avg,.85))),cv=T[o+3]*(M?M[s+3]/255:1);for(let z=0;z<3;z++)D[s+z]=D[s+z]*(1-cv)+Math.min(255,T[o+z]*k)*cv}
+ bx.putImageData(im,0,0);sf.forEach(t=>t.dispose());(P.log=P.log||[]).push({c:{...cfg},a:wm*dm});P.pts=[];P.poly=null;draw();quote()}
+$('#pf').onclick=()=>tileArea(S.floor,+$('#pw').value,+$('#pd').value);
+$('#pwl').onclick=()=>tileArea(S.walls,+$('#pw').value,+$('#pd').value);
+$('#save').onclick=()=>{if(photo&&!P.base)return;const cv=photo?pc:(renderer.render(scene,cam),canvas);cv.toBlob(async b=>{try{const d=window.claude&&await claude.use('downloads');if(!d){$('#info').textContent='Saving is not available in this view.';return}await d.save({filename:'tile-preview.png',data:b})}catch(err){}},'image/png')};
+const PROMPT='You are analysing a photo of an interior room so that tiles can be placed on its surfaces. All coordinates are fractions of the image width (x) and height (y), from 0 to 1, origin at the top-left. Return ONLY JSON of the form {"surfaces":[{"kind":"floor" or "wall","label":string,"quad":[[x,y],[x,y],[x,y],[x,y]],"polygon":[[x,y],...],"widthM":number,"depthM":number}]}. For a floor, quad is the four corners of the visible floor plane in the order far-left, far-right, near-right, near-left (corners may lie on or just beyond the image edge when the floor continues), and depthM is the floor depth from far to near. For a wall, quad is top-left, top-right, bottom-right, bottom-left, where the wall meets the ceiling and the floor, widthM is its width and depthM is its height. polygon is 6 to 16 points outlining the exact visible region of that surface, EXCLUDING furniture, people and objects that cover it; omit polygon if nothing covers the surface. Include the floor and up to 3 main walls. Estimate real sizes in metres using a door height of 2.05 m and a ceiling height of 2.4 to 2.7 m as scale. No commentary.';
+function showDet(){const bx=$('#pdet');bx.textContent='';(P.det||[]).forEach((d,i)=>{const b=el('button');b.className='act';b.textContent=d.label+' ('+d.w+' × '+d.d+' m, estimated)';b.onclick=()=>pick(i);bx.appendChild(b)});$('#pall').hidden=!(P.det&&P.det.length)}
+function pick(i){const d=P.det[i],W=P.base.width,Ht=P.base.height;P.pts=d.quad.map(p=>[p[0]*W,p[1]*Ht]);P.poly=d.poly?d.poly.map(p=>[p[0]*W,p[1]*Ht]):null;$('#pw').value=d.w;$('#pd').value=d.d;draw()}
+$('#pall').onclick=()=>{(P.det||[]).forEach((d,i)=>{pick(i);tileArea(d.kind==='floor'?S.floor:S.walls,d.w,d.d)})};
+$('#pai').onclick=async()=>{const st=$('#pst'),btn=$('#pai');if(!P.orig){st.textContent='Upload a room photo first.';return}
+ let sm=null;try{sm=window.claude&&await claude.use('sample')}catch(e){}
+ if(!sm){st.textContent='Auto-detect is not available in this view. Place the corners by hand.';return}
+ const s=Math.min(1,1024/Math.max(P.orig.width,P.orig.height)),c=el('canvas');c.width=P.orig.width*s|0;c.height=P.orig.height*s|0;c.getContext('2d').drawImage(P.orig,0,0,c.width,c.height);
+ const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.85));st.textContent='Claude is analysing the photo. This can take up to a minute.';btn.disabled=true;
+ try{const lim=await sm.limits();if(!lim.images)throw{code:'images_unavailable'};const r=await sm.json(PROMPT,{images:[blob],modelTier:'complex'});
+  const ok=q=>Array.isArray(q)&&q.length>=4&&q.every(p=>Array.isArray(p)&&isFinite(p[0])&&isFinite(p[1]));
+  P.det=(r.surfaces||[]).filter(d=>ok(d.quad)).slice(0,4).map((d,i)=>({kind:d.kind==='floor'?'floor':'wall',label:d.kind==='floor'?'Floor':'Wall '+i,quad:d.quad.slice(0,4),poly:ok(d.polygon)&&d.polygon.length>=3?d.polygon:null,w:Math.round((+d.widthM||4)*2)/2||4,d:Math.round((+d.depthM||3)*2)/2||3}));
+  showDet();if(P.det.length){pick(0);st.textContent='Found '+P.det.length+' surface(s). Check the corners, adjust if needed, then tile one or all.'}else st.textContent='No surfaces found. Place the corners by hand.'}
+ catch(e){st.textContent=e&&e.code==='not_granted'?'Permission to use Claude was declined.':'Auto-detect failed. Place the corners by hand.'}
+ btn.disabled=false};
+let brush=false,painting=false;
+$('#brush').onclick=()=>{brush=!brush;$('#brush').textContent='Restore brush: '+(brush?'on, paint over furniture':'off')};
+function paint(e){if(!P.base)return;const q=pos(e),bx=P.base.getContext('2d');bx.save();bx.beginPath();bx.arc(q[0],q[1],+$('#brs').value*P.base.width/1600,0,7);bx.clip();bx.drawImage(P.orig,0,0);bx.restore();draw()}
+function quote(){const nm=c=>TILES.find(t=>t.id===c.tile).name,nt=(c,a)=>Math.ceil(a/(c.size[0]*c.size[1]/1e4)*1.1);let tot=0;const L=['RK Tiling quote'];
+ const add=(lab,c,a)=>{const cost=(c.price||0)*a*1.1;tot+=cost;L.push(lab+': '+nm(c)+', '+c.size.join(' x ')+' cm, '+a.toFixed(1)+' m2, '+nt(c,a)+' tiles incl. 10% waste'+(cost?', about USD '+cost.toFixed(0):''))};
+ if(photo&&P.log&&P.log.length)P.log.forEach((l,i)=>add('Area '+(i+1),l.c,l.a));else{add('Floor',S.floor,FW*FD/1e4);if(S.wallOn)add('Walls',S.walls,(FW+FD)*WH/1e4)}
+ if(tot)L.push('Estimated total: USD '+tot.toFixed(0));L.push('Estimate only. Final price confirmed by the supplier.');$('#quote').value=L.join('\n')}
+$('#price').oninput=e=>{cur().price=+e.target.value||0;quote()};
+$('#cpq').onclick=()=>{const q=$('#quote');q.select();try{navigator.clipboard.writeText(q.value).catch(()=>document.execCommand('copy'))}catch(err){document.execCommand('copy')}};
+$('#waBtn').onclick=()=>{const n=($('#wa').value||'').replace(/\D/g,''),a=el('a');a.href='https://wa.me/'+n+'?text='+encodeURIComponent($('#quote').value);a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove()};
+const aoTex=flip=>{const c=el('canvas');c.width=c.height=256;const g=c.getContext('2d'),grad=(x0,y0,x1,y1,a)=>{const q=g.createLinearGradient(x0,y0,x1,y1);q.addColorStop(0,'rgba(20,15,10,'+a+')');q.addColorStop(1,'rgba(20,15,10,0)');g.fillStyle=q;g.fillRect(0,0,256,256)};grad(0,0,0,50,.3);grad(0,256,0,226,.22);if(flip)grad(256,0,214,0,.32);else grad(0,0,42,0,.32);return new THREE.CanvasTexture(c)};
+const aoMat=f=>new THREE.MeshBasicMaterial({map:aoTex(f),transparent:true,depthWrite:false});
+const aoB=new THREE.Mesh(new THREE.PlaneGeometry(1,1),aoMat(false)),aoL=new THREE.Mesh(new THREE.PlaneGeometry(1,1),aoMat(true));aoL.rotation.y=Math.PI/2;scene.add(aoB,aoL);
+props.visible=false;updateRoom();orbit();resize();sync();build();
+</script>
+</body></html>
