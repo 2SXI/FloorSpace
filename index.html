@@ -125,13 +125,13 @@ html{-webkit-tap-highlight-color:transparent}body{overscroll-behavior:none}butto
   <div class="seg2 modes"><button class="mt on" id="mp"><span class="lg">Room </span>photos</button><button class="mt" id="m3">3D room</button></div>
   <ol id="steps"><li><i>1</i><span id="s1">Pick a room</span></li><li><i>2</i>Choose a tile</li><li><i>3</i>Get a quote</li></ol>
   <div class="spacer"></div>
-  <button class="tbtn" id="cmpBtn">Compare</button><button class="tbtn" id="save">Save image</button><button class="tbtn" id="optBtn"><span class="lg">Options</span><span class="sm">⚙</span></button><button class="tbtn pri" id="gotoQuote"><span class="lg">Get a </span>quote</button>
+  <button class="tbtn" id="save">Save image</button><button class="tbtn" id="optBtn"><span class="lg">Options</span><span class="sm">⚙</span></button><button class="tbtn pri" id="gotoQuote"><span class="lg">Get a </span>quote</button>
  </header>
  <div id="main">
   <section id="stage">
    <div id="view"><canvas id="c"></canvas><canvas id="pc" hidden></canvas>
     <div id="sumchip"></div><div id="hint"></div>
-    <div id="pz" hidden><button data-t="pan" class="on">Move photo</button><button data-t="tiles">Move tiles</button><button id="zin">+</button><button id="zout">−</button><button id="zreset">Reset</button><button class="cmpb">Compare</button></div>
+    <div id="pz" hidden><button data-t="pan" class="on">Move photo</button><button data-t="tiles">Move tiles</button><button id="zin">+</button><button id="zout">−</button><button id="zreset">Reset</button></div>
     <div id="views" hidden><button data-v="0.5,1.1">Corner</button><button data-v="0,1.25">Front</button><button data-v="0.4,0.3">Top</button></div>
     <div id="busy" hidden>Placing your tiles…</div>
     <div id="guide" hidden><b>Use your own room photo</b><div id="gmsg"></div>
@@ -349,7 +349,7 @@ function updateRoom(){const cl=(v,a,b)=>Math.min(b,Math.max(a,v||a));FW=cl(+$('#
 ['rw','rd','rh'].forEach(i=>$('#'+i).onchange=()=>{updateRoom();apply()});
 let photo=false;const P={base:null,orig:null,pts:[],drag:-1},pc=$('#pc'),pg=pc.getContext('2d');
 const cp=c=>{const n=el('canvas');n.width=c.width;n.height=c.height;n.getContext('2d').drawImage(c,0,0);return n};
-function setMode(p){photo=p;$('#view').classList.toggle('ph',p);canvas.hidden=p;pc.hidden=!p;$('#roomx').hidden=p;$('#photox').hidden=!p;$('#views').hidden=p;$('#pz').hidden=!p;$('#strip').hidden=!p;$('#cmpBtn').hidden=!p;$('#s1').textContent=p?'Pick a room':'Set up your room';filt();$('#m3').classList.toggle('on',!p);$('#mp').classList.toggle('on',p);$('#hint').textContent=p?'Pick a room, then a tile':'Drag to rotate · scroll to zoom';$('#stabs').hidden=p&&!!P.room;sync();quote();if(!p){resize();build()}else if(P.room)preview()}
+function setMode(p){photo=p;$('#view').classList.toggle('ph',p);canvas.hidden=p;pc.hidden=!p;$('#roomx').hidden=p;$('#photox').hidden=!p;$('#views').hidden=p;$('#pz').hidden=!p;$('#strip').hidden=!p;$('#s1').textContent=p?'Pick a room':'Set up your room';filt();$('#m3').classList.toggle('on',!p);$('#mp').classList.toggle('on',p);$('#hint').textContent=p?'Pick a room, then a tile':'Drag to rotate · scroll to zoom';$('#stabs').hidden=p&&!!P.room;sync();quote();if(!p){resize();build()}else if(P.room)preview()}
 $('#m3').onclick=()=>setMode(false);$('#mp').onclick=()=>setMode(true);
 function draw(){if(!P.base)return;pc.width=P.base.width;pc.height=P.base.height;pg.drawImage(P.base,0,0);if(cmp&&(P.room||P.own)&&P.orig){const x=pc.width*cmpX,fs=Math.max(14,pc.width/45);pg.save();pg.beginPath();pg.rect(0,0,x,pc.height);pg.clip();pg.drawImage(P.orig,0,0);pg.restore();pg.fillStyle='#fff';pg.fillRect(x-2,0,4,pc.height);pg.beginPath();pg.arc(x,pc.height/2,pc.width/38,0,7);pg.fill();pg.fillStyle='rgba(0,0,0,.6)';pg.font='600 '+fs+'px sans-serif';pg.fillText('BEFORE',14,fs+10);pg.fillText('AFTER',pc.width-fs*4.4,fs+10)}const p=P.pts;$('#pst').textContent=p.length<4?'Click corner '+(p.length+1)+' of 4 (far left, far right, near right, near left).':'Drag the corners to fit, set the real size, then tile it.';if(!p.length)return;pg.lineWidth=Math.max(2,pc.width/400);pg.strokeStyle=pg.fillStyle='#ffcc33';pg.beginPath();p.forEach((q,i)=>i?pg.lineTo(q[0],q[1]):pg.moveTo(q[0],q[1]));if(p.length===4)pg.closePath();pg.stroke();p.forEach(q=>{pg.beginPath();pg.arc(q[0],q[1],pc.width/120+3,0,7);pg.fill()})}
 function pos(e){const r=pc.getBoundingClientRect(),s=Math.min(r.width/pc.width,r.height/pc.height);return[(e.clientX-r.left-(r.width-pc.width*s)/2)/s,(e.clientY-r.top-(r.height-pc.height*s)/2)/s]}
